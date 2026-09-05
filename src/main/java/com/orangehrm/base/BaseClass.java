@@ -41,7 +41,7 @@ public class BaseClass {
                 throw new IllegalArgumentException(String.format("%s browser not supported", browser));
         }
 
-        //Initialize implicitWait (Global Wait)
+        //Initialize implicitWait (Global Wait) in seconds
         int implicitWait = Integer.parseInt(prop.getProperty("implicitWait"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
 
